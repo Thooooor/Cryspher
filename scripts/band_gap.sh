@@ -1,0 +1,23 @@
+#!/bin/bash
+python main.py \
+    --model cgcnn \
+    --layers 3 \
+    --dim 128 \
+    --init_atom_dim 92 \
+    --init_edge_dim 1 \
+    --cuda True \
+    --device 4 \
+    --epochs 500 \
+    --patience 10 \
+    --eval_freq 5 \
+    --batch_size 128 \
+    --optimizer Adam \
+    --lr 0.01 \
+    --weight_decay 0.001 \
+    --momentum 0.95 \
+    --data_dir ./datasets/band_gap/ \
+    --data_file matbench_mp_gap.json \
+    --dataset band_gap \
+    --train_ratio 0.6 \
+    --valid_ratio 0.2 \
+    --test_ratio 0.2 \
